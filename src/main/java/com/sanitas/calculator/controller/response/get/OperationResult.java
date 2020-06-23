@@ -6,5 +6,6 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class OperationResult {
+
     private final double result;
 }

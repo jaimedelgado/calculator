@@ -31,7 +31,8 @@ public class Swagger2Config {
             "Calculator API",
             "1.0.0",
             "",
-            new Contact("Jaime Delgado Linares", "http://linkedin.com/in/jaimedelgado1", "jaimedl92@gmail.com"),
+            new Contact("Jaime Delgado Linares", "http://linkedin.com/in/jaimedelgado1",
+                "jaimedl92@gmail.com"),
             "GNU General Public License v3.0",
             "https://www.gnu.org/licenses/gpl-3.0.html",
             new ArrayList<>());

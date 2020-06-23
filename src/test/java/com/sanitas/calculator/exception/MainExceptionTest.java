@@ -7,7 +7,8 @@ import org.springframework.http.HttpStatus;
 public class MainExceptionTest {
 
     @Test
-    public void createMainExceptionTest(){
-        Assertions.assertEquals(new MainException("message").getStatus(), HttpStatus.INTERNAL_SERVER_ERROR);
+    public void createMainExceptionTest() {
+        Assertions.assertEquals(new MainException("message").getStatus(),
+            HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

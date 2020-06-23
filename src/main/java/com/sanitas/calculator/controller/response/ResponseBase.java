@@ -9,6 +9,7 @@ import lombok.Getter;
 @Getter
 @ApiModel
 public class ResponseBase<T> {
+
     @ApiModelProperty
     private final T data;
 }

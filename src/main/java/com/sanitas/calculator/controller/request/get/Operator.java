@@ -1,6 +1,5 @@
 package com.sanitas.calculator.controller.request.get;
 
-import java.util.function.Function;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 

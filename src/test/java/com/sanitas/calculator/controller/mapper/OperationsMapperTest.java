@@ -8,20 +8,21 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class OperationsMapperTest {
+
     private static OperationsMapper operationsMapper;
 
     @BeforeAll
-    public static void setUp(){
+    public static void setUp() {
         operationsMapper = new OperationsMapper();
     }
 
     @Test
-    public void restToDTOTest(){
+    public void restToDTOTest() {
         double operand2 = 2;
         double operand1 = 1;
         Operation operation = operationsMapper.toDTO(operand1, Operator.ADD, operand2);
         Assertions.assertTrue(operation instanceof Addition);
-        Assertions.assertEquals(((Addition)operation).getOperand1(), operand1);
-        Assertions.assertEquals(((Addition)operation).getOperand2(), operand2);
+        Assertions.assertEquals(((Addition) operation).getOperand1(), operand1);
+        Assertions.assertEquals(((Addition) operation).getOperand2(), operand2);
     }
 }

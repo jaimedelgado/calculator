@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Operations controller
  */
 public interface OperationsController {
+
     /**
      * Get operation result
      *
@@ -26,7 +27,8 @@ public interface OperationsController {
         @ApiResponse(code = 200, message = ControllerConstants.API_RESPONSE_200),
         @ApiResponse(code = 500, message = ControllerConstants.API_RESPONSE_500)
     })
-    @RequestMapping(value = "/operations", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(value = "/operations", method = RequestMethod.GET, produces = {
+        MediaType.APPLICATION_JSON_VALUE})
     ResponseEntity<ResponseBase<OperationResult>> getOperationResult(
         @RequestParam("operand1") double operand1,
         @RequestParam("operator") Operator operator,

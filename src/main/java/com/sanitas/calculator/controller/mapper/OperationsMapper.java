@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class OperationsMapper {
 
-    public Operation toDTO(double operand1, Operator operator, double operand2){
+    public Operation toDTO(double operand1, Operator operator, double operand2) {
         return operator.equals(Operator.ADD) ? new Addition(operand1, operand2) : null;
     }
 }

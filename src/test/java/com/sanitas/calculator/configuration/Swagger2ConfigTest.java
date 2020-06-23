@@ -10,7 +10,6 @@ public class Swagger2ConfigTest {
 
     /**
      * Api docket.
-     *
      */
     @Test
     public void apiTest() {
