@@ -3,6 +3,9 @@ package com.sanitas.calculator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Calculator application
+ */
 @SpringBootApplication
 public class CalculatorApplication {
 

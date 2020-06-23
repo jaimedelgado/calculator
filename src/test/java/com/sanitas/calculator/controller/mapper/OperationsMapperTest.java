@@ -8,6 +8,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Mapper test
+ */
 public class OperationsMapperTest {
 
     private static OperationsMapper operationsMapper;
@@ -17,6 +20,9 @@ public class OperationsMapperTest {
         operationsMapper = new OperationsMapper();
     }
 
+    /**
+     * Test a add operation to dto mapping
+     */
     @Test
     public void additionOperationDTOTest() {
         double operand2 = 2;
@@ -27,6 +33,9 @@ public class OperationsMapperTest {
         Assertions.assertEquals(((Addition) operation).getOperand2(), operand2);
     }
 
+    /**
+     * Test a sub operation to dto mapping
+     */
     @Test
     public void subtractionOperationDTOTest() {
         double operand2 = 2;

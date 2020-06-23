@@ -6,6 +6,9 @@ import com.sanitas.calculator.model.Operation;
 import com.sanitas.calculator.model.Subtraction;
 import org.springframework.stereotype.Component;
 
+/**
+ * Controller mapper. Map rest to dto layers.
+ */
 @Component
 public class OperationsMapper {
 

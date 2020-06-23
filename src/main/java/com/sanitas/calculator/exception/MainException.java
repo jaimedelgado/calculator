@@ -4,7 +4,7 @@ package com.sanitas.calculator.exception;
 import org.springframework.http.HttpStatus;
 
 /**
- * The type Main exception.
+ * The type Main exception. TODO: ErrorHandler foy beautify output
  *
  * @author paradigma
  */

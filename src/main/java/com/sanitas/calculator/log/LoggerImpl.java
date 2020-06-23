@@ -8,6 +8,9 @@ public class LoggerImpl implements Logger {
 
     private TracerImpl tracerImpl;
 
+    /**
+     * Empty constructor
+     */
     public LoggerImpl() {
         this.tracerImpl = new TracerImpl();
     }

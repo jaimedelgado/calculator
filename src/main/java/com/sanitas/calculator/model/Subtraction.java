@@ -1,5 +1,8 @@
 package com.sanitas.calculator.model;
 
+/**
+ * Subtraction operation
+ */
 public class Subtraction extends BinaryOperation {
 
     public Subtraction(double pOperand1, double pOperand2) {

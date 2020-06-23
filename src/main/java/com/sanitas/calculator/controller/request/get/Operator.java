@@ -3,6 +3,9 @@ package com.sanitas.calculator.controller.request.get;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+/**
+ * Available operators in the calculator
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 public enum Operator {

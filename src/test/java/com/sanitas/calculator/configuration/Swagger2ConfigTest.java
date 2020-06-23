@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Configuration to Swagger Test
+ * Swagger config test
  */
 public class Swagger2ConfigTest {
 
     /**
-     * Api docket.
+     * Api docket test
      */
     @Test
     public void apiTest() {

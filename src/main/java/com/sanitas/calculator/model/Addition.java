@@ -1,5 +1,8 @@
 package com.sanitas.calculator.model;
 
+/**
+ * Addition operation
+ */
 public class Addition extends BinaryOperation {
 
     public Addition(double pOperand1, double pOperand2) {

@@ -23,7 +23,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 
 /**
- * Configuration to Swagger Test
+ * Controller test
  */
 @SpringBootTest
 public class OperationsControllerTest {
@@ -38,6 +38,9 @@ public class OperationsControllerTest {
     @Mock
     private final Logger logger = mock(LoggerImpl.class);
 
+    /**
+     * Test a add operation in controller
+     */
     @Test
     public void getOperationResultWithAddition() {
         Operation operation = new Addition(2, 3);
@@ -52,6 +55,9 @@ public class OperationsControllerTest {
                 .getResult(), 5);
     }
 
+    /**
+     * Test a sub operation in controller
+     */
     @Test
     public void getOperationResultWithSubtraction() {
         Operation operation = new Subtraction(5, 3);

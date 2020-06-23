@@ -13,6 +13,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Calculator controller
+ */
 @RestController
 @Api(value = "Calculator API", tags = {"Operations"})
 public class OperationsControllerImpl implements OperationsController {
