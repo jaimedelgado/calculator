@@ -41,7 +41,7 @@ Siguiendo los pasos anteriores, bastaría con ejecutar el comando en la carpeta r
 ---
 
 #### Servicios disponibles
-Una vez lanzado el microservicio se podrá acceder al API accediente a la siguiente URL:
+Una vez lanzado el microservicio se podrá acceder al API accediendo a la siguiente URL:
 > **local**: http://localhost:8081/swagger-ui.html
 
 ---
