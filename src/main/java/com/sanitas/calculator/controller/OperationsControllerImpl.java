@@ -4,6 +4,7 @@ import com.sanitas.calculator.controller.mapper.OperationsMapper;
 import com.sanitas.calculator.controller.request.get.Operator;
 import com.sanitas.calculator.controller.response.ResponseBase;
 import com.sanitas.calculator.controller.response.get.OperationResult;
+import com.sanitas.calculator.log.Logger;
 import com.sanitas.calculator.model.Operation;
 import com.sanitas.calculator.service.OperationsService;
 import io.swagger.annotations.Api;
@@ -20,12 +21,15 @@ public class OperationsControllerImpl implements OperationsController {
     private OperationsMapper operationsMapper;
     @Autowired
     private OperationsService operationsService;
+    @Autowired
+    private Logger logger;
 
     @Override
     public ResponseEntity<ResponseBase<OperationResult>> getOperationResult(double operand1,
         Operator operator, double operand2) {
         Operation operation = operationsMapper.toDTO(operand1, operator, operand2);
         double result = operationsService.execute(operation);
+        logger.log(String.valueOf(result));
         return new ResponseEntity<>(new ResponseBase<>(new OperationResult(result)), HttpStatus.OK);
     }
 }

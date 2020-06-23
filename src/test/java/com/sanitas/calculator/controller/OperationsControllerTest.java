@@ -7,6 +7,8 @@ import static org.mockito.Mockito.when;
 
 import com.sanitas.calculator.controller.mapper.OperationsMapper;
 import com.sanitas.calculator.controller.request.get.Operator;
+import com.sanitas.calculator.log.Logger;
+import com.sanitas.calculator.log.LoggerImpl;
 import com.sanitas.calculator.model.Addition;
 import com.sanitas.calculator.model.Operation;
 import com.sanitas.calculator.service.OperationsService;
@@ -29,9 +31,11 @@ public class OperationsControllerTest {
     @InjectMocks
     private static OperationsControllerImpl operationsController;
     @Mock
-    private static OperationsService operationsService = mock(OperationsServiceImpl.class);
+    private static final OperationsService operationsService = mock(OperationsServiceImpl.class);
     @Mock
-    private static OperationsMapper operationsMapper = mock(OperationsMapper.class);
+    private static final OperationsMapper operationsMapper = mock(OperationsMapper.class);
+    @Mock
+    private static final Logger logger = mock(LoggerImpl.class);
 
     /**
      * Api docket.
