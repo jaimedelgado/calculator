@@ -6,7 +6,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public enum Operator {
-    ADD("+", "Arithmetic operation for adding two numbers");
+    ADD("+", "Arithmetic operation for adding two numbers"),
+    SUB("-", "Arithmetic operation for substrating two numbers");
+
     private String representation;
     private String description;
 }

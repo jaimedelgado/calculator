@@ -11,6 +11,7 @@ import com.sanitas.calculator.log.Logger;
 import com.sanitas.calculator.log.LoggerImpl;
 import com.sanitas.calculator.model.Addition;
 import com.sanitas.calculator.model.Operation;
+import com.sanitas.calculator.model.Subtraction;
 import com.sanitas.calculator.service.OperationsService;
 import com.sanitas.calculator.service.OperationsServiceImpl;
 import org.junit.jupiter.api.Assertions;
@@ -31,17 +32,14 @@ public class OperationsControllerTest {
     @InjectMocks
     private static OperationsControllerImpl operationsController;
     @Mock
-    private static final OperationsService operationsService = mock(OperationsServiceImpl.class);
+    private final OperationsService operationsService = mock(OperationsServiceImpl.class);
     @Mock
-    private static final OperationsMapper operationsMapper = mock(OperationsMapper.class);
+    private final OperationsMapper operationsMapper = mock(OperationsMapper.class);
     @Mock
-    private static final Logger logger = mock(LoggerImpl.class);
+    private final Logger logger = mock(LoggerImpl.class);
 
-    /**
-     * Api docket.
-     */
     @Test
-    public void getOperationResult() {
+    public void getOperationResultWithAddition() {
         Operation operation = new Addition(2, 3);
         when(operationsMapper.toDTO(anyDouble(), any(Operator.class), anyDouble()))
             .thenReturn(operation);
@@ -52,6 +50,20 @@ public class OperationsControllerTest {
         Assertions.assertEquals(
             operationsController.getOperationResult(2, Operator.ADD, 3).getBody().getData()
                 .getResult(), 5);
+    }
+
+    @Test
+    public void getOperationResultWithSubtraction() {
+        Operation operation = new Subtraction(5, 3);
+        when(operationsMapper.toDTO(anyDouble(), any(Operator.class), anyDouble()))
+            .thenReturn(operation);
+        when(operationsService.execute(operation)).thenReturn(2d);
+        Assertions.assertEquals(
+            operationsController.getOperationResult(2, Operator.ADD, 3).getStatusCode(),
+            HttpStatus.OK);
+        Assertions.assertEquals(
+            operationsController.getOperationResult(2, Operator.ADD, 3).getBody().getData()
+                .getResult(), 2);
     }
 
 }
